@@ -3,7 +3,6 @@ import Chatbot from "react-chatbot-kit";
 import { ConditionallyRender } from "react-util-kit";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import Toolbar from "@mui/material/Toolbar";
 
 import GradientBackground from "../GradientBackground/GradientBackground";
 import Accordion from "../Accordion/Accordion";
@@ -11,11 +10,10 @@ import config from "../../bots/config";
 import MessageParser from "../../bots/MessageParser";
 import ActionProvider from "../../bots/ActionProvider";
 
-export default function DrawerAppBar() {
+export default function Home() {
   return (
     <GradientBackground>
       <Box component="main" sx={{ p: 3 }}>
-        <Toolbar />
         <Grid
           container
           direction="row"

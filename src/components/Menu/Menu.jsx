@@ -13,16 +13,27 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+import { useNavigate } from "react-router-dom";
 
 const drawerWidth = 240;
-const navItems = ["Home", "About", "Contact"];
+const navItems = [
+  { name: "Home", url: "/" },
+  { name: "About", url: "/about" },
+  { name: "Contact", url: "/contact" },
+];
 
 export default function DrawerAppBar(props) {
+  const navigate = useNavigate();
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
+  };
+
+  const navigateHome = (url) => {
+    // 👇️ navigate to /
+    navigate(url);
   };
 
   const drawer = (
@@ -33,9 +44,9 @@ export default function DrawerAppBar(props) {
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
+          <ListItem key={item.name}>
             <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
+              <ListItemText primary={item.name} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -65,12 +76,18 @@ export default function DrawerAppBar(props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
-            CARLO
+            <Button key="1" href="/" sx={{ color: "#fff" }}>
+              CARLO
+            </Button>
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: "#fff" }}>
-                {item}
+              <Button
+                key={item.name}
+                sx={{ color: "#fff" }}
+                onClick={() => navigateHome(item.url)}
+              >
+                {item.name}
               </Button>
             ))}
           </Box>
@@ -83,14 +100,14 @@ export default function DrawerAppBar(props) {
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
-            keepMounted: true // Better open performance on mobile.
+            keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
             display: { xs: "block", sm: "none" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
-              width: drawerWidth
-            }
+              width: drawerWidth,
+            },
           }}
         >
           {drawer}

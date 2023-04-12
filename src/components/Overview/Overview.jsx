@@ -40,7 +40,7 @@ const Overview = (props) => {
       }
       onClick={() => overviewHandler(option)}
     >
-      {option.name}
+      {option?.name}
     </button>
   ));
 

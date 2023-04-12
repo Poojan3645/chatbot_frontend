@@ -24,9 +24,7 @@ const config = {
     },
   },
   initialMessages: [
-    createChatBotMessage(
-      `Hi I'm ${botName}. I’m here to help you explain how I work.`
-    ),
+    createChatBotMessage(`Welcome to CARLO BOT. what can i  help you?`),
     createChatBotMessage("Please select option.", {
       withAvatar: false,
       delay: 500,
