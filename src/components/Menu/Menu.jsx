@@ -21,8 +21,8 @@ import"./Menu.css";
 const drawerWidth = 240;
 const navItems = [
   { name: "Home", url: "/" },
-  { name: "About", url: "/about" },
-  { name: "Contact", url: "/contact" },
+  { name: "About Us", url: "/about" },
+  { name: "Contact Us", url: "/contact" },
 ];
 
 export default function DrawerAppBar(props) {

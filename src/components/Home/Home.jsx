@@ -51,7 +51,7 @@ export default function Home() {
         </Grid>
       </Box>
 
-      <Box component="main" sx={{ p: 3 }}>
+      <Box component="main" sx={{ p: 3, mt: -17 }}>
         <Grid
           container
           direction="row"
