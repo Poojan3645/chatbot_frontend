@@ -10,9 +10,10 @@ import config from "../../bots/config";
 import MessageParser from "../../bots/MessageParser";
 import ActionProvider from "../../bots/ActionProvider";
 
+import './Home.css';
 export default function Home() {
   return (
-    <GradientBackground>
+    <>
       <Box component="main" sx={{ p: 3 }}>
         <Grid
           container
@@ -23,7 +24,7 @@ export default function Home() {
         >
           <Grid item xs={6} md={6}>
             <div>
-              <h1>Car Dealer Bot</h1>
+              <h1 className="title">Car Dealer Bot</h1>
               <p>
                 Generating leads and providing customer service is super easy
                 for automotive dealers now. You don't have to hire hundreds of
@@ -58,11 +59,11 @@ export default function Home() {
           alignItems="flex-start"
         >
           <Grid item md={9}>
-            <h1>Frequently Asked Questions</h1>
+            <h1 className="title">Frequently Asked Questions</h1>
             <Accordion />
           </Grid>
         </Grid>
       </Box>
-    </GradientBackground>
+    </>
   );
 }

@@ -10,6 +10,9 @@ const Dealer = (props) => {
 
   const [dealer, setDealer] = useState([]);
 
+  console.log('dealerIds', dealerIds);
+
+
   const getCar = async () => {
     try {
       const res = await axiosConfig.post("dealer/dealerById", {

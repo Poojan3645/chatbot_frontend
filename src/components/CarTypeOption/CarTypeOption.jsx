@@ -5,7 +5,7 @@ import styles from "./CarTypeOption.module.css";
 
 const CarTypeOption = (props) => {
   const { setCarFilter, buttonIds, setButtonIds } = useContext(DataContext);
-  const carType = ["hathback", "sedan", "muv", "suv", "any"];
+  const carType = ["hatchback", "sedan", "muv", "suv", "any"];
 
   const carTypeHandler = (option) => {
     let type = option.name;

@@ -15,6 +15,9 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
 
+import"./Menu.css";
+
+
 const drawerWidth = 240;
 const navItems = [
   { name: "Home", url: "/" },

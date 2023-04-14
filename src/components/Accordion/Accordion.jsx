@@ -30,6 +30,7 @@ const AccordionSummary = styled((props) => (
     theme.palette.mode === "dark"
       ? "rgba(255, 255, 255, .05)"
       : "rgba(0, 0, 0, .03)",
+      color: "#2a5a89",
   flexDirection: "row-reverse",
   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
     transform: "rotate(90deg)",
@@ -75,7 +76,6 @@ export default function CustomizedAccordions() {
           onChange={handleChange(`panel${index + 1}`)}
         >
           <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-            {" "}
             <Typography>{data.question}</Typography>
           </AccordionSummary>
           <AccordionDetails>

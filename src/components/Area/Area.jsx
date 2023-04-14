@@ -11,6 +11,8 @@ const Area = (props) => {
   const [area, setArea] = useState([]);
 
   const areaHandler = (option) => {
+
+    console.log('option.dealerIds', option);
     setDealerIds(option.dealerIds);
 
     setButtonIds((pre) => {
@@ -22,6 +24,10 @@ const Area = (props) => {
 
   const getArea = async () => {
     try {
+
+    console.log('areaIds', areaIds);
+
+
       const res = await axiosConfig.post("area/areaById", {
         areaId: areaIds,
       });
@@ -34,6 +40,9 @@ const Area = (props) => {
           dealerIds: data.dealerId,
         };
       });
+
+    console.log('res.data.areaIds', res.data);
+
 
       mapData.push({
         name: "Main menu",
