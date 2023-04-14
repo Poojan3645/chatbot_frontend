@@ -65,7 +65,7 @@ export default function DrawerAppBar(props) {
       <CssBaseline />
       <AppBar component="nav">
         <Toolbar>
-          <IconButton
+          {/* <IconButton
             color="inherit"
             aria-label="open drawer"
             edge="start"
@@ -73,15 +73,17 @@ export default function DrawerAppBar(props) {
             sx={{ mr: 2, display: { sm: "none" } }}
           >
             <MenuIcon />
-          </IconButton>
+          </IconButton> */}
           <Typography
             variant="h6"
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
-            <Button key="1" href="/" sx={{ color: "#fff" }}>
-              CARLO
+            <div className="menu-title">
+            <Button  key="1" href="/" sx={{ color: "#fff" }}>
+              CarLo
             </Button>
+            </div>
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
